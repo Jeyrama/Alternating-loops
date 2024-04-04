@@ -12,3 +12,14 @@ Arrays can have different lengths.
 
 
 // Solution
+
+function combine(...arrs) {
+  let max = arrs.reduce((n, arr) => Math.max(n, arr.length), 0)
+  let res = []
+  for (let i = 0; i < max; i++) {
+    for (let arr of arrs) {
+      if (i in arr) res.push(arr[i])
+    }
+  }
+  return res
+}
