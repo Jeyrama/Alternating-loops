@@ -25,3 +25,10 @@ function combine(...arrs) {
 }
 
 // or
+
+const combine = (...arrs) => 
+  arrs.reduce((acc, arr, i) => {
+      return arr.forEach((item, j) => 
+      	acc[j * arrs.length + i] = item
+      ), acc;
+  }, []).filter(Boolean);
