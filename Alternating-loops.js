@@ -9,3 +9,6 @@ Example:
 
 Arrays can have different lengths.
 */
+
+
+// Solution
